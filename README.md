@@ -494,7 +494,7 @@ Es interesante establecer transacciones cuando se desea poder deshacer los cambi
  
 ### Métodos de carga de los objetos (_Session_)
 
-Básicamente son dos métodos (con variantes sobre ellos, ver documentación); _load_ y _get_. Ambos permiten recuperar datos, pero con alguna [diferencia](https://stackoverrun.com/es/q/1313934)
+Básicamente son dos métodos (con variantes sobre ellos, ver documentación); _load_ y _get_. Ambos permiten recuperar datos, pero con alguna diferencia
 
 * [load](https://docs.jboss.org/hibernate/orm/3.5/api/org/hibernate/Session.html#load(java.lang.Class,%20java.io.Serializable))
 	* Hay que usar este método si se está seguro de que existe (si no existe, arroja excepción). Permite recuperar un objeto mediante la clave primaria. No accede a la base de datos directamente, solo cuando se utiliza la referencia que devuelve.
