@@ -14,11 +14,32 @@ En el lenguaje que nos ocupa, Java, se desarrolló un sistema de persistencia de
 5. Agregar jar copiados en Java Build Path (Project Properties) --> *Add jar*
 6. Añadir a carpeta src del proyecto el fichero de configuración de hibernate (.xml).
 
+### Ejemplo con dependencias Maven
+```xml
 ### Ejemplo de fichero de configuración de hibernate
 
 Debe estar fuera de todos los packages, en la carpeta raíz del código, src. Contiene la configuración y las clases que se van a mapear.
 
 ```xml
+  	<dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-core</artifactId>
+		  <version>5.3.7.Final</version>
+		  
+	</dependency>
+	<dependency>
+		     <groupId>org.hibernate</groupId>
+		     <artifactId>hibernate-entitymanager</artifactId>
+		     <version>5.3.7.Final</version>
+   </dependency>
+	<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.44</version>
+     </dependency>
+
+```
+
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
@@ -504,4 +525,20 @@ Básicamente son dos métodos (con variantes sobre ellos, ver documentación); _
 
 ### Iteración de los resultados
 
-Cuando se recuperan datos provenientes de una relación, se aconseja utilizar un _[iterator](https://danielggarcia.wordpress.com/2014/04/14/patrones-de-comportamiento-i-patron-iterator/)_ para recorrer la lista de resultados. 
+Cuando se recuperan datos provenientes de una relación, se aconseja utilizar un _[iterator](https://danielggarcia.wordpress.com/2014/04/14/patrones-de-comportamiento-i-patron-iterator/)_ para recorrer la lista de resultados.
+
+
+### Validaciones
+
+![image](https://user-images.githubusercontent.com/117438320/202642811-bdeff797-735f-460a-8d8d-bae7fd165992.png)
+
+##Dependecia con maven
+
+```xml
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>4.3.0.Final</version>
+</dependency>
+
+```
